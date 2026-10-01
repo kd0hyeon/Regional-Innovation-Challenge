@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# 데이터 (용량이 크거나 민감할 수 있는 실제 라벨 데이터셋은 공유 방식 따로 상의)
+data/features.csv
+data/tune_result.csv
+
+# OS
+.DS_Store
+Thumbs.db

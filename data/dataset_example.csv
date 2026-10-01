@@ -1,0 +1,5 @@
+name,label,version,category,group,reported_at
+requests,0,,benign,,
+numpy,0,,benign,,
+flask,0,,benign,,
+some-hallucinated-pkg-123,1,,hallucinated_nonexistent,,
