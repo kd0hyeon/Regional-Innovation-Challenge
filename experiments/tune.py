@@ -27,7 +27,7 @@ def rule_sweep(rows):
             m = confusion(y, p)
             res.append(dict(rule=f"age<={a}d & dl<={d}", tp=m[0], fp=m[1], fn=m[2], tn=m[3],
                             **dict(zip(("precision", "recall", "f1"), prf(*m))), fpr=fpr(*m)))
-    return sorted(res, key=lambda x: (-x["f1"], -x["precision"])), len(rows) - len(usable)
+    return sorted(res, key=lambda x: (-(x["f1"] or 0), -(x["precision"] or 0))), len(rows) - len(usable)
 
 
 def threshold_sweep(rows, cfg, policy="positive"):
